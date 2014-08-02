@@ -1,0 +1,84 @@
+                   JEssentials Library : v 0.0.1
+
+Index
+I.   Authors
+II.  Description
+III. Copyright
+IV.  System Requirements
+V.   Using the Library
+VI.  Running the samples
+
+I. Authors:
+
+1. Rushang Vinod Vandana Karia
+      - Masters in Computer Science
+      - Arizona State 
+      - Rushang.Karia@asu.edu
+
+2. Shrijal Pravin Gandhi
+      - Research Assitant
+      - Decision Theater (dt.asu.edu)
+      - Shrijal.Gandhi@asu.edu
+
+II. Description:
+The JEssential Library is an attempt to unify the most useful
+libraries in JAVA as well as several new features.
+
+The JEssential Library contains the implementation of the 
+algorithms used in the Introduction to Algorithms by
+Cormen, Leiserson, Rivest and Stein Textbook. This is a huge
+collection of 200+ algorithms.
+
+Samples are provided for every class that is implemented.
+
+The source code as well as jars are provided in a non-canonical
+format which will be fixed in the next release.
+
+The documentation can be generated using javadoc and broken links will
+be fixed in the next release.
+
+Please email bug reports to the authors.
+
+We hope this library can soon have many collaborators
+
+III. COPYRIGHT
+
+    Copyright (C) 2014  Rushang Karia, Shrijal Gandhi
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+This program is also covered by all the licenses that it uses, and
+by using this program you agree to the terms of the those licenses and
+their conditions. When the conditions of the licenses conflict, the 
+original license is always said to be enforced over the license that
+is provided in this document.
+
+IV. SYSTEM REQUIREMENTS
+JAVA 1.6 or higher.
+JDK 1.6 or higher is required for building
+Current make script is for windows only
+
+V. USING THE LIBRARY
+Import the jar file into eclipse or add the jar file to 
+the class path
+
+VI. RUNNING THE SAMPLES
+From eclipse, navigate to the sample and press run.
+Make sure the library file is in the referenced libraries
+
+From the command line, add the jar file to the class path
+and either navigate to the directory and run it or
+
+java -cp "jars/*" package_name.class_name
