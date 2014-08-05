@@ -1,47 +1,30 @@
-                   JEssentials Library : v 0.0.1
+ #########################################################################
+ #                       CLRS 3rd Edition v1.0.0                         #
+ #########################################################################
 
-Index
-I.   Authors
-II.  Description
-III. Copyright
-IV.  System Requirements
-V.   Using the Library
-VI.  Running the samples
+ Description : This software is an implementation of the algorithms 
+               in the Introduction to Algorithms book by
+               Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
+ 
+               Information about the book can be found here :-
+               http://en.wikipedia.org/wiki/Introduction_to_Algorithms
+               http://mitpress.mit.edu/books/introduction-algorithms
 
-I. Authors:
 
-1. Rushang Vinod Vandana Karia
-      - Masters in Computer Science
-      - Arizona State 
-      - Rushang.Karia@asu.edu
+ Author :      Rushang Vinod Vandana Karia
+                   - Rushang.Karia@asu.edu
+                   - 4806283130
+                   - github.com/RushangKaria
+                   - Arizona State University
 
-2. Shrijal Pravin Gandhi
-      - Research Assitant
-      - Decision Theater (dt.asu.edu)
-      - Shrijal.Gandhi@asu.edu
+ Author :      Shrijal Pravin Gandhi
+                   - Shrijal.Gandhi@asu.edu
+                   - 4806282324
+                   - github.com/ShrijalGandhi
+                   - Arizona State University
 
-II. Description:
-The JEssential Library is an attempt to unify the most useful
-libraries in JAVA as well as several new features.
-
-The JEssential Library contains the implementation of the 
-algorithms used in the Introduction to Algorithms by
-Cormen, Leiserson, Rivest and Stein Textbook. This is a huge
-collection of 200+ algorithms.
-
-Samples are provided for every class that is implemented.
-
-The source code as well as jars are provided in a non-canonical
-format which will be fixed in the next release.
-
-The documentation can be generated using javadoc and broken links will
-be fixed in the next release.
-
-Please email bug reports to the authors.
-
-We hope this library can soon have many collaborators
-
-III. COPYRIGHT
+ File : README
+         Description about this software                   
 
     Copyright (C) 2014  Rushang Karia, Shrijal Gandhi
 
@@ -59,26 +42,27 @@ III. COPYRIGHT
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-This program is also covered by all the licenses that it uses, and
-by using this program you agree to the terms of the those licenses and
-their conditions. When the conditions of the licenses conflict, the 
-original license is always said to be enforced over the license that
-is provided in this document.
+REQUIRED SYSTEM REQUIREMENTS :
+1. JAVA SE 1.6 or higher. Download it for free at http://www.oracle.com/technetwork/java/javase/downloads/index.html
+2. For developers, JDK 1.6 or higher is required to rebuild the project :- http://www.oracle.com/technetwork/java/javase/downloads/index.html
+3. Windows/Linux/Mac (32/64 bit) supporting [1]
+4. 512MB free RAM. free RAM is the amount of RAM available on an idle processor with the OS running
 
-IV. SYSTEM REQUIREMENTS
-JAVA 1.6 or higher.
-JDK 1.6 or higher is required for building
-Current make script is for windows only
+RECOMMENDED SYSTEM REQUIREMENTS :
+1. JAVA SE 1.7 or higher
+2. 4GB free RAM
 
-V. USING THE LIBRARY
-Import the jar file into eclipse or add the jar file to 
-the class path
+                                KNOWN BUGS 
 
-VI. RUNNING THE SAMPLES
-From eclipse, navigate to the sample and press run.
-Make sure the library file is in the referenced libraries
+ERROR MESSAGE   : "Unsupported Major-Minor version 55"
+CAUSE           : This software was compiled using JAVA 1.7+. Older versions might be incompatible. 
+FIX             : Upgrade to the latest version of JAVA
 
-From the command line, add the jar file to the class path
-and either navigate to the directory and run it or
+ERROR MESSAGE   : "JAVA Heap Space Error : Out of heap space"
+CAUSE           : The memory was insufficient
+FIX             : Increase the memory available to the JVM/ Increase your RAM/ Decrease the input size
 
-java -cp "jars/*" package_name.class_name
+                                CONTENTS
+
+The following lists the features of the program
+ 

@@ -44,11 +44,14 @@ package com.util.printers;
 
 import com.util.time.FormatTime;
 
+
 /**
 * Creates a progress bar with rich information.
 */
 public class ProgressBar
 {
+    public static boolean PRINT_OFF = false;
+
 	private long limit;
 	private int cache;
 	private double total_time;
@@ -86,7 +89,7 @@ public class ProgressBar
     */
 	public void set(long progress)
 	{
-		if((int)((progress*100.0)/this.limit) == cache) //Maintain a cache to prevent flickering for fast calls
+		if((int)((progress*100.0)/this.limit) == cache || ProgressBar.PRINT_OFF) //Maintain a cache to prevent flickering for fast calls
 		return;
 
 	this.cache      = (int)((progress*100.0)/this.limit);	

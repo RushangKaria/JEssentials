@@ -62,11 +62,20 @@ javac com/util/exception/*.java
 javac com/util/time/*.java
 javac com/util/generators/*.java
 javac com/util/printers/*.java
+javac com/util/file/*.java
 javac com/util/file/writers/*.java
+javac com/util/statistics/*.java
+javac com/util/arrays/*.java
+javac -cp jars/Javamail.jar com/util/net/*.java
 
 :: COMPILE THE MATH LIBRARY
 javac com/math/*.java
 javac com/math/combinations/*.java
+
+:: COMPILE THE GRAPH LIBRARY
+javac com/graph/*.java
+javac com/graph/readers/*.java
+javac com/graph/coloring/*.java
 
 :: COMPILE THE CLRS LIBRARY 
 javac com/clrs/*.java
@@ -84,6 +93,11 @@ javac samples/exception/*.java
 javac samples/printers/*.java
 javac samples/math/combinations/*.java
 javac samples/coveringarray/generators/*.java
+javac samples/util/net/*.java
+javac samples/util/statistics/*.java
+javac samples/util/file/*.java
+javac samples/graph/readers/*.java
+javac samples/graph/coloring/*.java
 
 :: PACK SAMPLES INTO A JAR FILE
 jar cf jars/samples.jar samples

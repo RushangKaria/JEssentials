@@ -1,0 +1,63 @@
+
+C:\Users\rkaria\Desktop\CLRS>java -cp "jars/*" samples.graph.coloring.RandomGreedyColoringDemo 
+---------------- RANDOM GREEDY COLORING -----------------
+C2000.5.col with Chromatic # = 222 in 0h:0m:0.55s
+C4000.5.col with Chromatic # = 403 in 0h:0m:1.61s
+dsjc1000.1.col with Chromatic # = 32 in 0h:0m:0.02s
+dsjc1000.5.col with Chromatic # = 127 in 0h:0m:0.35s
+dsjc1000.9.col with Chromatic # = 323 in 0h:0m:0.53s
+dsjc125.1.col with Chromatic # = 9 in 0h:0m:0.00s
+dsjc125.9.col with Chromatic # = 57 in 0h:0m:0.00s
+dsjc250.1.col with Chromatic # = 13 in 0h:0m:0.00s
+dsjc250.5.col with Chromatic # = 44 in 0h:0m:0.01s
+dsjc250.9.col with Chromatic # = 101 in 0h:0m:0.01s
+dsjc500.1.col with Chromatic # = 20 in 0h:0m:0.01s
+dsjc500.9.col with Chromatic # = 174 in 0h:0m:0.21s
+dsjr500.1c.col with Chromatic # = 110 in 0h:0m:0.22s
+dsjr500.5.col with Chromatic # = 149 in 0h:0m:0.21s
+flat1000_50_0.col with Chromatic # = 124 in 0h:0m:0.52s
+flat1000_60_0.col with Chromatic # = 124 in 0h:0m:0.46s
+flat1000_76_0 (1).col with Chromatic # = 125 in 0h:0m:0.32s
+flat1000_76_0.col with Chromatic # = 125 in 0h:0m:0.08s
+
+C:\Users\rkaria\Desktop\CLRS>java -cp "jars/*" samples.graph.coloring.LargestDegreeFirstColoringDemo 
+---------------- LARGEST DEGREE COLORING -----------------
+C2000.5.col with Chromatic # = 219 in 0h:0m:0.56s
+C4000.5.col with Chromatic # = 395 in 0h:0m:1.66s
+dsjc1000.1.col with Chromatic # = 30 in 0h:0m:0.02s
+dsjc1000.5.col with Chromatic # = 122 in 0h:0m:0.08s
+dsjc1000.9.col with Chromatic # = 313 in 0h:0m:0.16s
+dsjc125.1.col with Chromatic # = 7 in 0h:0m:0.00s
+dsjc125.9.col with Chromatic # = 54 in 0h:0m:0.00s
+dsjc250.1.col with Chromatic # = 12 in 0h:0m:0.00s
+dsjc250.5.col with Chromatic # = 42 in 0h:0m:0.01s
+dsjc250.9.col with Chromatic # = 94 in 0h:0m:0.01s
+dsjc500.1.col with Chromatic # = 19 in 0h:0m:0.01s
+dsjc500.9.col with Chromatic # = 170 in 0h:0m:0.04s
+dsjr500.1c.col with Chromatic # = 101 in 0h:0m:0.05s
+dsjr500.5.col with Chromatic # = 135 in 0h:0m:0.03s
+flat1000_50_0.col with Chromatic # = 124 in 0h:0m:0.09s
+flat1000_60_0.col with Chromatic # = 122 in 0h:0m:0.08s
+flat1000_76_0 (1).col with Chromatic # = 123 in 0h:0m:0.08s
+flat1000_76_0.col with Chromatic # = 123 in 0h:0m:0.09s
+
+C:\Users\rkaria\Desktop\CLRS>java -cp "jars/*" samples.graph.coloring.DSaturColoringDemo 
+---------------- DSATUR COLORING -----------------
+C2000.5.col with Chromatic # = 210 in 0h:0m:53.59s
+C4000.5.col with Chromatic # = 377 in 0h:7m:21.59s
+dsjc1000.1.col with Chromatic # = 27 in 0h:0m:2.07s
+dsjc1000.5.col with Chromatic # = 115 in 0h:0m:6.87s
+dsjc1000.9.col with Chromatic # = 299 in 0h:0m:8.33s
+dsjc125.1.col with Chromatic # = 6 in 0h:0m:0.01s
+dsjc125.9.col with Chromatic # = 51 in 0h:0m:0.02s
+dsjc250.1.col with Chromatic # = 10 in 0h:0m:0.03s
+dsjc250.5.col with Chromatic # = 37 in 0h:0m:0.11s
+dsjc250.9.col with Chromatic # = 92 in 0h:0m:0.14s
+dsjc500.1.col with Chromatic # = 16 in 0h:0m:0.26s
+dsjc500.9.col with Chromatic # = 170 in 0h:0m:1.04s
+dsjr500.1c.col with Chromatic # = 90 in 0h:0m:0.82s
+dsjr500.5.col with Chromatic # = 130 in 0h:0m:0.83s
+flat1000_50_0.col with Chromatic # = 114 in 0h:0m:6.76s
+flat1000_60_0.col with Chromatic # = 114 in 0h:0m:6.79s
+flat1000_76_0 (1).col with Chromatic # = 115 in 0h:0m:6.79s
+flat1000_76_0.col with Chromatic # = 115 in 0h:0m:6.82s
