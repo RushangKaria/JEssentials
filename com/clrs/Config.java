@@ -42,23 +42,58 @@
 
 package com.clrs;
 
+/**
+* This class holds information about the program.
+* <p>
+* It also has a few editable fields which can be used.
+*/
 public class Config
 {
+    /**
+    * Records the name of the book.
+    */
     private static final String PROGRAM_NAME = "CLRS";
+
+    /**
+    * The program version typically following Linux Kernel versioning.
+    */
     private static final String PROGRAM_VERSION = "1.0.0";
+
+    /**
+    * The edition of the book which is supported.
+    */
     private static final String BOOK_VERSION = "3rd Edition";
 
+    /**
+    * A directory from where inputs can be received. This variable can be changed and the change affects
+    * the entire program.
+    */
     public static       String INPUT_FOLDER = "inputs/";
-    public static       String OUTPUT_FOLDER = "outputs/";
-    public static       String SAMPLES_FOLDER = "samples/";
 
+    /**
+    * A directory where the outputs can be stored. This variable can be changed and the change affects
+    * the entire program.
+    */
+    public static       String OUTPUT_FOLDER = "outputs/";
+
+    /**
+    * This variable can be used to turn off append modes for files. When this mode 
+    * is set any existing files will be deleted and recreated. This variable is global
+    * and setting the file settings to this variable affects the whole program.
+    */
     public static final boolean APPEND_OFF = false;
+
+    /**
+    * This variable can be used to turn off append modes for files. When this mode 
+    * is set any existing files will be appended with the new data. This variable is global
+    * and setting the file settings to this variable affects the whole program.
+    */
     public static final boolean APPEND_ON  = true;
 
 
     /**
-    * Get the program information of the form {BOOK-BOOK EDITION - VERSION}
-    * @return String
+    * Get the program information of the form {BOOK-BOOK EDITION - VERSION}.
+    * @return The program info which contains the book, edition and version.
     */
     public static String getProgramInfo()
     {
@@ -66,8 +101,8 @@ public class Config
     }
 
     /**
-    * Get the program name
-    * @return String
+    * Get the program name for the current program.
+    * @return The program name. 
     */
     public static String getProgramName()
     {
@@ -75,8 +110,8 @@ public class Config
     }
 
     /**
-    * Get the book edition
-    * @return String
+    * Get the edition of the book which the current program supports.
+    * @return The edition of the book which is supported.
     */
     public static String getBookVersion()
     {
@@ -84,8 +119,8 @@ public class Config
     }
 
     /**
-    * Get the program version
-    * @return String
+    * Get the program version where the versioning system matches that followed by the Linux Kernel.
+    * @return The current program version.
     */
     public static String getProgramVersion()
     {

@@ -40,52 +40,87 @@
 *
 */
 
-/**
-* This interface is used to reflect 
-* information in the CLRS book.
-*/
 
+/**
+* This package contains implementations of the 
+* algorithms in the CLRS textbook.
+* <p>
+* The algorithms implemented depend on the book edition
+* @see com.clrs.Config#BOOK_VERSION
+*/
+package com.clrs;
+
+/**
+* This interface is used to enforce some methods that 
+* every algorithm of the CLRS textbook *must* implement.
+* <p>
+* Some common methods are to retrieve complexities and 
+* instances which cause worst case behavior.
+*/
 public interface Algorithm
 {
     /**
     * This method returns the name of the
-    * algorithm
-    * @return The name of the algorithm
+    * algorithm.
+    * @return The name of the algorithm.
     */
     public String getName();
 
     /**
     * This method returns wiki about 
-    * the algorithm
-    * @return Information about the algorithm
+    * the algorithm.
+    * <p>
+    * The wiki can include information extracted from Wikipedia
+    * and other sources.
+    * @return Information about the algorithm.
     */
     public String getInfo();
 
     /*
     * The method returns the time complexity
-    * of the algorithm
-    * @return Complexity of the algorithm
+    * of the algorithm.
+    * <p>
+    * The format of the time complexity is already in a table form
+    * and can be embedded in a print statement to display it.
+    * <p>
+    * For example @codeSystem.out.println(<Algorithm>.getInfo());
+    * @return Various complexities of the algorithm.
     */
     public String getComplexity();
 
     /*
     * This method returns a best case example(s)
-    * for the algorithm (if known)
-    * @return Example input(s) which causes the algorithm to run in the best case    
+    * for the algorithm (if known).
+    * <p>
+    * As with @see#getInfo() the String is already properly formatted and can
+    * be embedded in a print statement to display it.
+    * <p>
+    * For example @codeSystem.out.println(<Algorithm>.getExampleBest());
+    * @return Example input(s) which causes the algorithm to run in the best case.
     */
     public String getExampleBest();
 
     /**
     * This method returns a worst case example(s)
-    * for the algorithm (if known)
-    * @return Example input(s) which causes the algorithm to run in the worst case
+    * for the algorithm (if known).
+    * <p>
+    * As with @see#getInfo() the String is already properly formatted and can
+    * be embedded in a print statement to display it.
+    * <p>
+    * For example @codeSystem.out.println(<Algorithm>.getExampleWorst());
+    * @return Example input(s) which causes the algorithm to run in the worst case.
     */
     public String getExampleWorst();
 
     /**
-    * This method returns an average case example
-    * for the algorithm (if known)
-    * @return Example input(s) which causes the algorithm to run in the average case
+    * This method returns an average case example(s)
+    * for the algorithm (if known).
+    * <p>
+    * As with @see#getInfo() the String is already properly formatted and can
+    * be embedded in a print statement to display it.
+    * <p>
+    * For example @codeSystem.out.println(<Algorithm>.getExampleAverage());
+    * @return Example input(s) which causes the algorithm to run in the worst case.
     */
     public String getExampleAverage();
 }
