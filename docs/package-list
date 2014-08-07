@@ -1,0 +1,17 @@
+com.clrs
+com.clrs.sorting
+com.coveringarray.generators
+com.graph
+com.graph.coloring
+com.graph.readers
+com.math
+com.math.combinations
+com.util.arrays
+com.util.exception
+com.util.file
+com.util.file.writers
+com.util.generators
+com.util.net
+com.util.printers
+com.util.statistics
+com.util.time

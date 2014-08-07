@@ -55,7 +55,14 @@
 IF "%1%"=="clean" (
 DEL /S *.class
 goto :EOF
-) 
+) ELSE IF "%1%"=="docs" (
+    IF "%2%"=="library" (
+    javadoc -d docs/ -classpath "jars/*" -subpackages com
+    ) ELSE IF "%2%"=="samples" (
+    javadoc -d docs/ -classpath "jars/*" -subpackages samples
+    )
+goto :EOF
+)
 
 :: COMPILE THE UTIL LIBRARY FIRST
 javac com/util/exception/*.java
