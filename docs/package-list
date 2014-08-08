@@ -1,6 +1,8 @@
 com.clrs
 com.clrs.sorting
+com.coveringarray
 com.coveringarray.generators
+com.coveringarray.parsers
 com.graph
 com.graph.coloring
 com.graph.readers
@@ -9,8 +11,10 @@ com.math.combinations
 com.util.arrays
 com.util.exception
 com.util.file
+com.util.file.readers
 com.util.file.writers
 com.util.generators
+com.util.hash
 com.util.net
 com.util.printers
 com.util.statistics

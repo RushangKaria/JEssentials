@@ -84,13 +84,15 @@ public class ExhaustiveArray
     public void generate()
     {  
         this.generator = new SigmaAlgebra(this.v,this.t);
-        ProgressBar progressbar = new ProgressBar(generator.getTotal());             
+        ProgressBar progressbar = new ProgressBar(this.generator.getTotal());             
         ArrayWriter writer = new ArrayWriter(getFileName());
 
             if(writer.open())
             {
             long iterator = 0;
             System.out.println("Generating " + this.v + "^" + this.t);
+            writer.write(""+this.generator.getTotal());
+            
                 while(this.generator.hasNext())
                 {
                 progressbar.set(++iterator);

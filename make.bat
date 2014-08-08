@@ -32,8 +32,10 @@
 ::
 :: File : make.bat
 ::          Makefile for building the library and samples on Windows
+::          NOTE: This makefile does not consider time stamps of files
+::                so compiling the library takes a really long time. Will be fixed soon.
 ::
-::
+::  
 ::    Copyright (C) 2014  Rushang Karia, Shrijal Gandhi
 ::
 ::    This program is free software: you can redistribute it and/or modify
@@ -57,9 +59,9 @@ DEL /S *.class
 goto :EOF
 ) ELSE IF "%1%"=="docs" (
     IF "%2%"=="library" (
-    javadoc -d docs/ -classpath "jars/*" -subpackages com
+    javadoc -private -d docs/ -classpath "jars/*" -link http://docs.oracle.com/javase/7/docs/api/ -subpackages com 
     ) ELSE IF "%2%"=="samples" (
-    javadoc -d docs/ -classpath "jars/*" -subpackages samples
+    javadoc -private -d docs/ -classpath "jars/*" -link http://docs.oracle.com/javase/7/docs/api/ -subpackages samples
     )
 goto :EOF
 )
@@ -73,6 +75,7 @@ javac com/util/file/*.java
 javac com/util/file/writers/*.java
 javac com/util/statistics/*.java
 javac com/util/arrays/*.java
+javac com/util/hash/*.java
 javac -cp jars/Javamail.jar com/util/net/*.java
 
 :: COMPILE THE MATH LIBRARY
@@ -89,7 +92,9 @@ javac com/clrs/*.java
 javac com/clrs/sorting/*.java
 
 :: COMPILE THE COVERING ARRAY LIBRARY
+javac com/coveringarray/*.java
 javac com/coveringarray/generators/*.java
+javac com/coveringarray/parsers/*.java
 
 :: PACK THE LIBRARY INTO A JAR FILE
 jar cf jars/clrs_lib.jar com
@@ -100,6 +105,7 @@ javac samples/exception/*.java
 javac samples/printers/*.java
 javac samples/math/combinations/*.java
 javac samples/coveringarray/generators/*.java
+javac samples/coveringarray/parsers/*.java
 javac samples/util/net/*.java
 javac samples/util/statistics/*.java
 javac samples/util/file/*.java

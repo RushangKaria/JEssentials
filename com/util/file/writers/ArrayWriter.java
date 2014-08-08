@@ -141,4 +141,18 @@ public class ArrayWriter
 
     return true;
     }
+
+    public boolean write(String message)
+    {
+        try
+        {
+           this.file_writer.println(message);
+        }
+        catch(Exception e)
+        {
+        return false;
+        }
+
+    return true;
+    }
 }
