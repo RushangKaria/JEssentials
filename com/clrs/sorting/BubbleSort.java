@@ -43,15 +43,16 @@
 package com.clrs.sorting;
 
 /**
-* Bubble Sort Implementation
-* See @link http://en.wikipedia.org/wiki/Bubble_sort
+* Bubble Sort Implementation,
+* for more details about Bubblesort see <a href="http://en.wikipedia.org/wiki/Bubble_sort" >Bubble Sort Wiki</a>
 */
 public class BubbleSort
 {
     /**
-    * Sorts an int[] in ascending order using bubble sort.
-    * @param1 takes a integer array as input
-    * @return void
+    * Sorts an {@code int[]} in ascending order using bubble sort.
+    * <p>
+    * This method sorts the array in place.
+    * @param array takes a integer array as input.
     */
     public static void sort(int array[])
     {
@@ -68,9 +69,10 @@ public class BubbleSort
     }
 
     /**
-    * Sorts a double[] in ascending order using bubble sort.
-    * @param1 takes a integer array as input
-    * @return void
+    * Sorts a {@code double[]} in ascending order using bubble sort.
+    * <p>
+    * This method sorts the array in place.
+    * @param array takes a double array as input.
     */
     public static void sort(double array[])
     {
@@ -85,6 +87,46 @@ public class BubbleSort
                 array[i] = temp;
                 }
     }    
+
+    /**
+    * Sorts a {@code byte[]} in ascending order using bubble sort.
+    * <p>
+    * This method sorts the array in place.
+    * @param array takes a byte array as input.
+    */
+    public static void sort(byte array[])
+    {
+    byte temp;
+
+        for(int i=0;i<array.length-1;i++)
+            for(int j=i+1;j<array.length;j++)
+                if(array[j] < array[i])
+                {
+                temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+                }
+    }   
+
+    /**
+    * Sorts a {@code long[]} in ascending order using bubble sort.
+    * <p>
+    * This method sorts the array in place.
+    * @param array takes a long array as input.
+    */
+    public static void sort(long array[])
+    {
+    long temp;
+
+        for(int i=0;i<array.length-1;i++)
+            for(int j=i+1;j<array.length;j++)
+                if(array[j] < array[i])
+                {
+                temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+                }
+    }       
 }
 
 
