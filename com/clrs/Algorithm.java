@@ -68,6 +68,7 @@ public interface Algorithm
     * <p>
     * For example {@code System.out.println(<Algorithm>.getInfo());}
     * @return Information about the algorithm.
+    * @see #getComplexity()
     */
     public String getInfo();
 
@@ -90,6 +91,8 @@ public interface Algorithm
     * <p>
     * For example {@code System.out.println(<Algorithm>.getExampleBest());}
     * @return Example input(s) which causes the algorithm to run in the best case.
+    * @see #getExampleWorst() 
+    * @see #getExampleAverage()
     */
     public String getExampleBest();
 
@@ -101,6 +104,8 @@ public interface Algorithm
     * <p>
     * For example {@code System.out.println(<Algorithm>.getExampleWorst());}
     * @return Example input(s) which causes the algorithm to run in the worst case.
+    * @see #getExampleBest()
+    * @see #getExampleAverage()
     */
     public String getExampleWorst();
 
@@ -111,7 +116,9 @@ public interface Algorithm
     * be embedded in a print statement to display it.
     * <p>
     * For example {@code System.out.println(<Algorithm>.getExampleAverage());}
-    * @return Example input(s) which causes the algorithm to run in the worst case.
+    * @return Example input(s) which causes the algorithm to run in the average case.
+    * @see #getExampleBest()
+    * @see #getExampleWorst()
     */
     public String getExampleAverage();
 }

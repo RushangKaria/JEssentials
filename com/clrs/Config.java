@@ -21,7 +21,7 @@
 *                   - Arizona State University
 *
 * File : Config.java
-*          Stores basic configuration for the project
+*          Stores basic configuration for the CLRS book.
 *
 *    Copyright (C) 2014  Rushang Karia, Shrijal Gandhi
 *
@@ -43,9 +43,10 @@
 package com.clrs;
 
 /**
-* This class holds information about the program.
+* This class holds common information about the program.
 * <p>
-* It also has a few editable fields which can be used.
+* It provides uniform directories for input and output to the
+* programs.
 */
 public class Config
 {
@@ -65,34 +66,35 @@ public class Config
     private static final String BOOK_VERSION = "3rd Edition";
 
     /**
-    * A directory from where inputs can be received. This variable can be changed and the change affects
-    * the entire program.
+    * A directory from where inputs can be received.
+    * Any change to this variable affects the whole program.
     */
     public static       String INPUT_FOLDER = "inputs/";
 
     /**
-    * A directory where the outputs can be stored. This variable can be changed and the change affects
-    * the entire program.
+    * A directory where the outputs can be stored.
+    * Any change to this variable affects the whole program.
     */
     public static       String OUTPUT_FOLDER = "outputs/";
 
     /**
-    * This variable can be used to turn off append modes for files. When this mode 
-    * is set any existing files will be deleted and recreated. This variable is global
-    * and setting the file settings to this variable affects the whole program.
+    * This variable can be used to turn off append modes for files. 
+    * <p>
+    * When this mode is set any existing files will be deleted and recreated.
     */
     public static final boolean APPEND_OFF = false;
 
     /**
-    * This variable can be used to turn off append modes for files. When this mode 
-    * is set any existing files will be appended with the new data. This variable is global
-    * and setting the file settings to this variable affects the whole program.
+
+    * This variable can be used to turn on append modes for files. 
+    * <p>
+    * When this mode is set any existing files will be appended to.
     */
     public static final boolean APPEND_ON  = true;
 
 
     /**
-    * Get the program information of the form {BOOK-BOOK EDITION - VERSION}.
+    * Gets the program information of the form {@code <book>-<edition>-<version>}.
     * @return The program info which contains the book, edition and version.
     */
     public static String getProgramInfo()
@@ -101,7 +103,7 @@ public class Config
     }
 
     /**
-    * Get the program name for the current program.
+    * Gets the program name for the current program.
     * @return The program name. 
     */
     public static String getProgramName()
@@ -110,7 +112,7 @@ public class Config
     }
 
     /**
-    * Get the edition of the book which the current program supports.
+    * Gets the edition of the book which the current program supports.
     * @return The edition of the book which is supported.
     */
     public static String getBookVersion()
@@ -119,7 +121,7 @@ public class Config
     }
 
     /**
-    * Get the program version where the versioning system matches that followed by the Linux Kernel.
+    * Gets the program version where the versioning system matches that followed by the Linux Kernel.
     * @return The current program version.
     */
     public static String getProgramVersion()
