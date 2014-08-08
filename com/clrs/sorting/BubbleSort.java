@@ -45,6 +45,10 @@ package com.clrs.sorting;
 /**
 * Bubble Sort Implementation,
 * for more details about Bubblesort see <a href="http://en.wikipedia.org/wiki/Bubble_sort" >Bubble Sort Wiki</a>
+* @see com.clrs.sorting.InsertionSort
+* @see com.clrs.sorting.MergeSort
+* @see com.clrs.sorting.QuickSort
+* @see com.clrs.sorting.HeapSort
 */
 public class BubbleSort
 {
