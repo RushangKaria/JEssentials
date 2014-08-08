@@ -40,14 +40,6 @@
 *
 */
 
-
-/**
-* This package contains implementations of the 
-* algorithms in the CLRS textbook.
-* <p>
-* The algorithms implemented depend on the book edition
-* @see com.clrs.Config#BOOK_VERSION
-*/
 package com.clrs;
 
 /**
@@ -60,66 +52,65 @@ package com.clrs;
 public interface Algorithm
 {
     /**
-    * This method returns the name of the
-    * algorithm.
+    * Gets the name of the algorithm.
     * @return The name of the algorithm.
     */
     public String getName();
 
     /**
-    * This method returns wiki about 
-    * the algorithm.
+    * Gets some wiki about the algorithm.
     * <p>
     * The wiki can include information extracted from Wikipedia
     * and other sources.
+    * <p>
+    * The String is already properly formatted and be embedded in a print
+    * statement to display it.
+    * <p>
+    * For example {@code System.out.println(<Algorithm>.getInfo());}
     * @return Information about the algorithm.
     */
     public String getInfo();
 
-    /*
-    * The method returns the time complexity
-    * of the algorithm.
+    /**
+    * Gets the time complexity of the algorithm.
     * <p>
-    * The format of the time complexity is already in a table form
+    * As with {@link #getInfo()}, the format of the time complexity is already in a table form
     * and can be embedded in a print statement to display it.
     * <p>
-    * For example @codeSystem.out.println(<Algorithm>.getInfo());
+    * For example {@code System.out.println(<Algorithm>.getComplexity());}
     * @return Various complexities of the algorithm.
     */
     public String getComplexity();
 
-    /*
-    * This method returns a best case example(s)
-    * for the algorithm (if known).
+    /**
+    * Returns a best case example(s) for the algorithm (if known).
     * <p>
-    * As with @see#getInfo() the String is already properly formatted and can
+    * As with {@link #getInfo()}, the String is already properly formatted and can
     * be embedded in a print statement to display it.
     * <p>
-    * For example @codeSystem.out.println(<Algorithm>.getExampleBest());
+    * For example {@code System.out.println(<Algorithm>.getExampleBest());}
     * @return Example input(s) which causes the algorithm to run in the best case.
     */
     public String getExampleBest();
 
     /**
-    * This method returns a worst case example(s)
-    * for the algorithm (if known).
+    * Returns a worst case example(s) for the algorithm (if known).
     * <p>
-    * As with @see#getInfo() the String is already properly formatted and can
+    * As with {@link getInfo()}, the String is already properly formatted and can
     * be embedded in a print statement to display it.
     * <p>
-    * For example @codeSystem.out.println(<Algorithm>.getExampleWorst());
+    * For example {@code System.out.println(<Algorithm>.getExampleWorst());}
     * @return Example input(s) which causes the algorithm to run in the worst case.
     */
     public String getExampleWorst();
 
     /**
-    * This method returns an average case example(s)
-    * for the algorithm (if known).
+    * Returns an average case example(s) for the algorithm (if known).
     * <p>
-    * As with @see#getInfo() the String is already properly formatted and can
+    * As with {@link getInfo()}, the String is already properly formatted and can
     * be embedded in a print statement to display it.
     * <p>
-    * For example @codeSystem.out.println(<Algorithm>.getExampleAverage());
+    * For example {@code System.out.println(<Algorithm>.getExampleAverage());}
     * @return Example input(s) which causes the algorithm to run in the worst case.
     */
     public String getExampleAverage();

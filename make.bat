@@ -59,9 +59,9 @@ DEL /S *.class
 goto :EOF
 ) ELSE IF "%1%"=="docs" (
     IF "%2%"=="library" (
-    javadoc -private -d docs/ -classpath "jars/*" -link http://docs.oracle.com/javase/7/docs/api/ -subpackages com 
+    javadoc -private -d docs/ -link http://docs.oracle.com/javase/7/docs/api/ -subpackages com
     ) ELSE IF "%2%"=="samples" (
-    javadoc -private -d docs/ -classpath "jars/*" -link http://docs.oracle.com/javase/7/docs/api/ -subpackages samples
+    javadoc -private -d docs/ -link http://docs.oracle.com/javase/7/docs/api/ -subpackages samples
     )
 goto :EOF
 )
