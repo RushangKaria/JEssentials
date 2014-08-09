@@ -44,32 +44,58 @@ package com.clrs.sorting;
 
 
 /**
-* QuickSort implementation
-* See @link http://en.wikipedia.org/wiki/Quick_sort
+* Sorts arrays via Quick sort, 
+* for more details about Quick sort see <a href="http://en.wikipedia.org/wiki/Quick_sort" >Quick Sort Wiki</a>
+* @see com.clrs.sorting.InsertionSort
+* @see com.clrs.sorting.MergeSort
+* @see com.clrs.sorting.HeapSort
+* @see com.clrs.sorting.BubbleSort
 */
 public class QuickSort
 {
     /**
-    * Sorts an int[] in ascending order using merge sort.
-    * @param1 takes a integer array as input
-    * @return void
+    * Sorts an {@code int[]} in ascending order using quick sort.
+    * <p>
+    * This method sorts the array in-place.
+    * @param array takes an integer array as input.
     */
     public static void sort(int array[])
     {
         quicksort(array,0,array.length-1);
     }
 
+    /**
+    * Divides the arrays into smaller parts 
+    * while placing one element at its <b>true</b> sorted position in the array.
+    * <p>
+    * The recursion tree can grow quite long for large input and this might cause
+    * {@link java.lang.StackOverflowError} errors.
+    * @param array the array to be sorted.
+    * @param low the first index of the subarray.
+    * @param high the last index of the subarray.
+    * @throws java.lang.StackOverflowError
+    * @see java.lang.StackOverflowError
+    */
     private static void quicksort(int array[],int low,int high)
     {
         if(low < high)
         {
             int pivot = partition(array,low,high);
-        //System.out.println("P = "+pivot+" L = "+low+" H = "+high);
             quicksort(array,low,pivot-1);
             quicksort(array,pivot+1,high);
         }
     }
 
+    /**
+    * Partitions the elements into two ideally equal parts while placing
+    * one element at its correct position relative to the sorted array.
+    * <p>
+    * The index at that element <b>must</b> not participate in any further recursion levels.
+    * @param array the array to be sorted.
+    * @param low the first index of the subarray.
+    * @param high the last index of the subarray.
+    * @return the index of the element which got placed in its final position.
+    */
     private static int partition(int array[],int low,int high)
     {
      int pivot = array[high];

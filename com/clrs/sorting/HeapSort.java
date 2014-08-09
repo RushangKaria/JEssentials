@@ -45,7 +45,7 @@ package com.clrs.sorting;
 import com.util.arrays.ArrayUtils;
 
 /**
-* Sorts arrays via HeapSort
+* Sorts arrays via HeapSort, 
 * for more details about Heapsort see <a href="http://en.wikipedia.org/wiki/Heap_sort" >Heap Sort Wiki</a>
 * @see com.clrs.sorting.MergeSort
 * @see com.clrs.sorting.QuickSort

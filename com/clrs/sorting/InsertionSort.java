@@ -44,16 +44,21 @@ package com.clrs.sorting;
 
 
 /**
-* InsertionSort implementation
-* See @link http://en.wikipedia.org/wiki/Insertion_sort
+* Sorts arrays via Insertion sort, 
+* for more details about Insertion sort see <a href="http://en.wikipedia.org/wiki/Insertion_sort" >Insertion Sort Wiki</a>
+* @see com.clrs.sorting.MergeSort
+* @see com.clrs.sorting.QuickSort
+* @see com.clrs.sorting.HeapSort
+* @see com.clrs.sorting.BubbleSort
 */
 public class InsertionSort
 {
 
     /**
-    * Sorts an int[] in ascending order using insertion sort.
-    * @param1 takes a integer array as input
-    * @return void
+    * Sorts an {@code int[]} in ascending order using insertion sort.
+    * <p>
+    * This method sorts the array in-place.
+    * @param array takes an integer array as input.
     */
     public static void sort(int array[])
     {
@@ -73,9 +78,10 @@ public class InsertionSort
     }
 
     /**
-    * Sorts a double[] in ascending order using insertion sort.
-    * @param1 takes a double array as input
-    * @return void
+    * Sorts a {@code double[]} in ascending order using insertion sort.
+    * <p>
+    * This method sorts the array in-place.
+    * @param array takes a double array as input.
     */
     public static void sort(double array[])
     {

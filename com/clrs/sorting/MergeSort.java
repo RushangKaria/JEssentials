@@ -44,22 +44,38 @@ package com.clrs.sorting;
 
 
 /**
-* MergeSort implementation
-* See @link http://en.wikipedia.org/wiki/Merge_sort
+* Sorts arrays via Merge sort, 
+* for more details about Merge sort see <a href="http://en.wikipedia.org/wiki/Merge_sort" >Merge Sort Wiki</a>
+* @see com.clrs.sorting.InsertionSort
+* @see com.clrs.sorting.QuickSort
+* @see com.clrs.sorting.HeapSort
+* @see com.clrs.sorting.BubbleSort
 */
 public class MergeSort
 {
     /**
-    * Sorts an int[] in ascending order using merge sort.
-    * @param1 takes a integer array as input
-    * @return void
+    * Sorts an {@code int[]} in ascending order using merge sort.
+    * <p>
+    * <b> Note that this does not sort the array in place. </b>
+    * @param array takes an integer array as input
     */
     public static void sort(int array[])
     {
         mergesort(array,0,array.length-1);   
     }
 
-    private static void mergesort(int array[],int low,int high)
+    /**
+    * Divides the arrays into two halves and then combines them.
+    * <p>
+    * The recursion depth can become quite high for large arrays and can
+    * cause {@link java.lang.StackOverflowError} errors.
+    * @param array the array to be sorted.
+    * @param low the first index of the subarray
+    * @param high the last index of the subarray 
+    * @throws java.lang.StackOverflowError    
+    * @see java.lang.StackOverflowError
+    */
+    private static void mergesort(int array[],int low,int high)throws StackOverflowError
     {
        if(low < high)
        {
@@ -69,18 +85,27 @@ public class MergeSort
        }
     }
 
+    /**
+    * Merges the subarrays into a sorted array.
+    * <p>
+    * <b> This method does not sort and merge in-place.</b><br>
+    * When this method returns the lower levels are sorted with respect to each other but not with the final array.
+    * @param array the array to be sorted.
+    * @param low the first index of the subarray
+    * @param high the last index of the subarray 
+    */
     private static void merge(int array[],int low,int mid,int high)
     {
     int i = 0;
     int j = 0;
     int k = 0;    
 
-        int L[] = new int[mid - low + 1];
-        int R[] = new int[high - mid];
+        int L[] = new int[mid - low + 1];   //Extra storage required
+        int R[] = new int[high - mid];      //for copying the elements.
 
         k = 0;
-        for(i=low;i<mid+1;i++)
-        L[k++] = array[i];
+        for(i=low;i<mid+1;i++)              //Copy the elements of the original array
+        L[k++] = array[i];                  //into the new arrays
 
         k = 0;
         for(i=mid+1;i<=high;i++)
@@ -90,7 +115,7 @@ public class MergeSort
         j = 0;
         k = low;
         
-        while(i < (mid-low+1) && j < (high-mid))
+        while(i < (mid-low+1) && j < (high-mid))    //merge!!
             if(L[i] < R[j])
             array[k++] = L[i++];       
             else

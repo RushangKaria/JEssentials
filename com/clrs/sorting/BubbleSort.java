@@ -43,7 +43,7 @@
 package com.clrs.sorting;
 
 /**
-* Bubble Sort Implementation,
+* Sorts arrays via Bubble sort, 
 * for more details about Bubblesort see <a href="http://en.wikipedia.org/wiki/Bubble_sort" >Bubble Sort Wiki</a>
 * @see com.clrs.sorting.InsertionSort
 * @see com.clrs.sorting.MergeSort
