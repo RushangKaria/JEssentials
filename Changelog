@@ -17,7 +17,13 @@ implementation of Radix Sort
 implementation of Bucket Sorot
 implementation of Graph Coloring using Tabu Search
 implementation of Covering Array Verification
+implementation of BestEfforParser for covering arrays
 implementation of Base Coverters.
 An extension of the Email Class.
 
 Several changes to the API calls.
+
+In progress
+-----------------
+
+CoveringArrayVerifier (Multi-threaded)
