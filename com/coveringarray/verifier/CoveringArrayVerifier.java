@@ -42,8 +42,16 @@
 
 package com.coveringarray.verifier;
 
+import java.io.File;
+import java.util.HashMap;
+
+import com.util.printers.ProgressBar;
+
 import com.coveringarray.CoveringArrayParameters;
-import com.coveringarray.parsers.CoveringArrayParser;
+
+import com.math.combinations.Combinations;
+
+import com.util.printers.ArrayPrinter;
 
 /**
 * A verifier for Covering Arrays.
@@ -66,33 +74,74 @@ public class CoveringArrayVerifier
     private int NO_OF_THREADS;
 
     /**
-    * Holds the Covering Array File
-    */
-    private File CA_SOURCE_FILE;
-
-    /**
     * Constructor which takes the covering array file and parses
     * it.
     * <p>
     * Any error during parsing will cause the verification method to fail.
+    * @param CA_SOURCE_FILE the covering array file
     */
-    public CoveringArrayVerifier(File CA_SOURCE_FILE)
+    public CoveringArrayVerifier(CoveringArrayParameters parameters)
     {
-        this.CA_SOURCE_FILE = CA_SOURCE_FILE;
+        this.parameters = parameters;
+        this.NO_OF_THREADS = Runtime.getRuntime().availableProcessors();          
     }    
 
     /**
     * Verifies if the covering array has 100% coverage - all interactions covered atleast once.
+    * <p>
+    * This verifier works on a very fundamental and reasonable assumption. <br>
+    * A position is called a dont-care position only if all interactions representing that symbol already occur in the array.
     * @return true if the CA has 100% coverage, false if some interactions are missing. {@link #getMissing()} can be used to find out which.
     */
-    public boolean verify()
+    public boolean verify()throws InterruptedException
     {
+    ProgressBar progressbar;
+    Combinations column_pairs;
+    VerifierWorker workers[];
+    int threads = 0;
+    int join_count = 0;
+    long interactions_done = 0;
 
-    return false;
-    }
+    progressbar = new ProgressBar(this.parameters.k_choose_t);
+    workers = new VerifierWorker[this.NO_OF_THREADS];
+    column_pairs = new Combinations(this.parameters.k,this.parameters.t);
+              
+        while(column_pairs.hasNext())
+        {
+        threads = 0;
+        join_count = 0;   
+        System.gc();
+        
+            while(threads < this.NO_OF_THREADS && column_pairs.hasNext())
+            {
+            workers[threads] = new VerifierWorker(this.parameters,column_pairs.next());
+            workers[threads++].start();
+            }
+            
+            while(join_count < threads)
+            workers[join_count++].join();
+
+        threads = 0;
+
+            while(threads < join_count)
+            if(!workers[threads++].isValid())
+            return false;
+
+        interactions_done += join_count;
+        progressbar.set(interactions_done);
+        }//end of while
+    
+    return true;
+    }//end of method
 
     /**
     * Gets the interactions which are missing of the covering.
+    * <p>
+    * To control the memory usage of the application, only the first 
+    * missed pair is kept. The others are discarded.
+    * <p>
+    * To retrieve all missing interactions see {@link #getAllMissing()}.
+    * @see #getAllMissing()
     */
     public void getMissing()
     {

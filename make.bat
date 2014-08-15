@@ -95,6 +95,7 @@ javac com/clrs/sorting/*.java
 javac com/coveringarray/*.java
 javac com/coveringarray/generators/*.java
 javac com/coveringarray/parsers/*.java
+javac com/coveringarray/verifier/*.java
 
 :: PACK THE LIBRARY INTO A JAR FILE
 jar cf jars/clrs_lib.jar com
@@ -106,6 +107,7 @@ javac samples/printers/*.java
 javac samples/math/combinations/*.java
 javac samples/coveringarray/generators/*.java
 javac samples/coveringarray/parsers/*.java
+javac samples/coveringarray/verifier/*.java
 javac samples/util/net/*.java
 javac samples/util/statistics/*.java
 javac samples/util/file/*.java

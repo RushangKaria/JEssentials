@@ -59,10 +59,11 @@ public class CoveringArrayParserDemo
 
     void driver()
     {
-        parseColbourn();
-        parseNIST();
-        parseJtj();
-        parseCanonical();
+        //parseColbourn();
+        //parseNIST();
+        //parseJtj();
+        //parseCanonical();
+        parseUnsupported();
     }
 
     void parseColbourn()
@@ -167,7 +168,27 @@ public class CoveringArrayParserDemo
 
     void parseUnsupported()
     {
-    
+    System.out.println("-------------------- UNKNOWN ARRAY TEST --------------------");        
+
+    CoveringArrayParameters ca;
+    CoveringArrayParser parser;
+    FileUtils file_utils;
+    File files[];
+
+        files = FileUtils.getFiles(this.CA_SOURCE_PATH + "unknown/");
+
+        for(File covering_array : files)
+        {
+        parser = new CoveringArrayParser(covering_array); 
+
+            if(parser.parse())
+            {
+            ca = parser.getParameters();
+            ca.display();
+            }
+        }
+        
+    System.out.println("-------------------------------------------------------------");      
     }
 
     public static void main(String args[])

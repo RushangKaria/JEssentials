@@ -80,7 +80,7 @@ class JimenezParser extends CAParser
     /**
     * Represents the symbol which marks dont care in the array.
     */
-    private final String DONT_CARE = "-1";
+    private String DONT_CARE = "";
 
     /**
     * Constructor which sets the covering array file and sets
@@ -159,6 +159,7 @@ class JimenezParser extends CAParser
             this.parameters.t = Byte.parseByte(params[3]);
             this.parameters.k = Integer.parseInt(params[1]);
             this.parameters.v = Byte.parseByte(params[2]);
+            this.DONT_CARE = "" + (this.parameters.v+1);
 
         this.parameters.CA = new byte[this.parameters.N][this.parameters.k];
         this.parameters.compute();

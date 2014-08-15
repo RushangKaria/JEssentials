@@ -148,8 +148,8 @@ public class CoveringArrayParser
                                  return parser.parse();
 
         case UNSUPPORTED       :
-        default                : System.out.println("UNSUPPORTED");
-                                 return false;
+        default                : this.parser = new BestEffortParser(this.CA_FILE);
+                                 return parser.parse();
         }
 
     }

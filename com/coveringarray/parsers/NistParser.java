@@ -187,7 +187,8 @@ class NistParser extends CAParser
         line = file_reader.readLine(); 
         this.parameters.N = Integer.parseInt(line);
         CA = new byte[this.parameters.N][this.parameters.k];
-        
+      
+         
         row = 0;             
             while((line=file_reader.readLine())!=null)
             {
@@ -202,7 +203,8 @@ class NistParser extends CAParser
                                                   
             row++;
             }
-
+            
+        this.parameters.CA = CA;
         file_reader.close();
         }
         catch(Exception e)

@@ -12,12 +12,11 @@ update javadoc for com.math.combinations
 update javadoc to include package descriptions.
 
 removal of com.clrs.Sorting_Interface -> This was really not required
-implementation of Counting Sort
+
 implementation of Radix Sort
 implementation of Bucket Sorot
 implementation of Graph Coloring using Tabu Search
-implementation of Covering Array Verification
-implementation of BestEfforParser for covering arrays
+
 implementation of Base Coverters.
 An extension of the Email Class.
 
@@ -26,4 +25,11 @@ Several changes to the API calls.
 In progress
 -----------------
 
-CoveringArrayVerifier (Multi-threaded)
+
+implementation of Counting Sort
+
+Completed
+-------------------
+
+CoveringArrayVerifier (Multi-threaded)  : A multi-threaded verifier for covering arrays.
+implementation of BestEfforParser for covering arrays : A parser to try to parse unknown CA's
