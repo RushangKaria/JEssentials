@@ -1,4 +1,4 @@
-:: #########################################################################
+:: ########################################################################
 :: #                       CLRS 3rd Edition v1.0.0                         #
 :: #                        MAKEFILE FOR WINDOWS                           #
 :: #                                                                       #
@@ -96,6 +96,9 @@ javac com/coveringarray/*.java
 javac com/coveringarray/generators/*.java
 javac com/coveringarray/parsers/*.java
 javac com/coveringarray/verifier/*.java
+javac com/coveringarray/report/*.java
+javac com/coveringarray/analytics/*.java
+javac com/coveringarray/printers/*.java
 
 :: PACK THE LIBRARY INTO A JAR FILE
 jar cf jars/clrs_lib.jar com
@@ -108,6 +111,9 @@ javac samples/math/combinations/*.java
 javac samples/coveringarray/generators/*.java
 javac samples/coveringarray/parsers/*.java
 javac samples/coveringarray/verifier/*.java
+javac samples/coveringarray/report/*.java
+javac samples/coveringarray/analytics/*.java
+javac samples/coveringarray/printers/*.java
 javac samples/util/net/*.java
 javac samples/util/statistics/*.java
 javac samples/util/file/*.java
@@ -116,5 +122,4 @@ javac samples/graph/coloring/*.java
 
 :: PACK SAMPLES INTO A JAR FILE
 jar cf jars/samples.jar samples
-
 

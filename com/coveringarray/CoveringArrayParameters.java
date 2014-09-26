@@ -127,6 +127,39 @@ public class CoveringArrayParameters
     }
 
     /**
+    * Clones the parameters of this object and returns a new copy.
+    * The copy performed is a deep copy.
+    * It is safe to change the other copy without affect this object.
+    * @return a deep copy of the parameters.
+    */
+    public CoveringArrayParameters clone()
+    {
+    CoveringArrayParameters parameters = new CoveringArrayParameters();
+
+        parameters.N = this.N;
+        parameters.t = this.t;
+        parameters.k = this.k;
+        parameters.v = this.v;
+        
+        parameters.k_choose_t           = this.k_choose_t;
+        parameters.v_power_t            = this.v_power_t;
+        parameters.total_interactions   = this.total_interactions;
+
+        if(this.CA != null)
+        {
+        parameters.CA = new byte[this.CA.length][this.CA[0].length];
+
+            for(int i=0;i<parameters.CA.length;i++)
+                for(int j=0;j<parameters.CA[0].length;j++)
+                parameters.CA[i][j] = this.CA[i][j];
+        }
+        else
+        parameters.CA = null;
+
+    return parameters;
+    }
+
+    /**
     * Use this method to compute the total interactions
     * that are possible.
     * <p>
@@ -135,6 +168,13 @@ public class CoveringArrayParameters
     */
     public void compute()
     {   
+        if(this.k <= 0 || this.v <= 0 || this.t <= 0)
+        {
+        this.k_choose_t = -1;
+        this.v_power_t  = -1;
+        return;
+        }
+    
         this.k_choose_t = Combinations.nCk(this.k,this.t);
         this.v_power_t  = (long)Math.pow(this.v,this.t);
 

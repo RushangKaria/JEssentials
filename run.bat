@@ -18,5 +18,8 @@
 ::java -cp "jars/*" samples.graph.coloring.RandomGreedyColoringDemo
 ::java -cp "jars/*" samples.graph.coloring.LargestDegreeFirstColoringDemo
 ::java -cp "jars/*" samples.graph.coloring.DSaturColoringDemo
-java -cp "jars/*" samples.coveringarray.parsers.CoveringArrayParserDemo
+::java -cp "jars/*" samples.coveringarray.parsers.CoveringArrayParserDemo
 ::java -cp "jars/*" samples.coveringarray.verifier.CoveringArrayVerifierDemo
+
+::java -cp "jars/*" samples.coveringarray.report.RowFetchDemo
+java -cp "jars/*" samples.coveringarray.report.CAReportUtilsDemo

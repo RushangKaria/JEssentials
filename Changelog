@@ -6,12 +6,7 @@ Updated javadoc for com.clrs.sorting
 Added a lazy wrapper for HashMap to incorporate multiple
 values per key via LinkedList's.
 
-EXPECTED CHANGES IN THE NEXT VERSION
-
-update javadoc for com.math.combinations
-update javadoc to include package descriptions.
-
-removal of com.clrs.Sorting_Interface -> This was really not required
+EXPECTED CHANGES IN THE NEXT VERSION (0.0.1b)
 
 implementation of Radix Sort
 implementation of Bucket Sorot
@@ -24,8 +19,10 @@ Several changes to the API calls.
 
 In progress
 -----------------
+removal of com.clrs.Sorting_Interface -> This was really not required
 
-
+update javadoc for com.math.combinations
+update javadoc to include package descriptions.
 implementation of Counting Sort
 
 Completed

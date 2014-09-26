@@ -123,6 +123,42 @@ public class Array1DGenerator implements Generator_Interface
     }
 
     /**
+    * Generate an int[] with only positive numbers of the specified/random
+    * size.
+    * @return int[]
+    */
+    public int[] generatePositiveInt()
+    {
+    int array[] = new int[this.size];
+
+        for(int i=0;i<this.size;i++)
+        {
+        array[i] = generator.nextInt() % this.MAX_RANGE;
+        array[i] = array[i] < 0 ? -array[i] : array[i];
+        }
+        
+    return array;      
+    }
+
+    /**
+    * Generate an byte[] with only positive numbers of the specified/random
+    * size.
+    * @return byte[]
+    */
+    public byte[] generatePositiveByte()
+    {
+    byte array[] = new byte[this.size];
+
+        for(int i=0;i<this.size;i++)
+        {
+        array[i] = (byte) (generator.nextInt() % (byte)this.MAX_RANGE);
+        array[i] = array[i] < 0 ? (byte) -array[i] : (byte) array[i];
+        }
+        
+    return array;      
+    }
+
+    /**
     * Generate a String[]
     * of the specified size. The String array
     * only constitutes the alphabet [a-z] and [A-Z]
